@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9; /* Light gray background color */
+            color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 2rem;
+            background: linear-gradient(45deg, #ff9ff3, #3498db); /* Light pink to light blue gradient */
+            border-radius: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease-out;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #fff; /* White color for section title */
+            font-weight: bold;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Increased gap between skills */
+            justify-content: center;
+        }
+
+        .skill {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: #fff; /* White color for circle */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            color: #2c3e50; /* Dark gray text color */
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+        }
+
+        .technical-label,
+        .nontechnical-label,
+        .tools-label {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #fff; /* White color for side headings */
+            text-align: left;
+        }
+
+        .skills-label {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #2c3e50; /* Dark gray color for skills label */
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Go back button styling */
+        .back-to-home {
+            background-color: #000; /* Black background color */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="section-title">Skills</div>
+
+        <!-- Technical Skills -->
+        <div class="technical-label">Technical Skills</div>
+        <div class="skills-container">
+            <div class="skill">C</div>
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">DBMS</div>
+            <div class="skill">DSA</div>
+            <div class="skill">Software Testing</div>
+            <div class="skill">Java</div>
+            <div class="skill">Automation Testing</div>
+        </div>
+
+        <!-- Non-Technical Skills -->
+        <div class="nontechnical-label">Non-Technical Skills</div>
+        <div class="skills-container">
+            <div class="skills-label">Communication Skills</div>
+            <div class="skills-label">Team Work</div>
+            <div class="skills-label">Time Management</div>
+            <div class="skills-label">Flexibility</div>
+        </div>
+
+        <!-- Tools -->
+        <div class="tools-label">Tools</div>
+        <div class="skills-container">
+            <div class="skill">MATLAB</div>
+            <div class="skill">Katalon Academy</div>
+            <div class="skill">PyCharm</div>
+            <div class="skill">Selenium</div>
+            <div class="skill">Git</div>
+            <div class="skill">GitHub</div>
+        </div>
+    </div>
+
+    <!-- Go back button -->
+    <button class="back-to-home" onclick="location.href='index.html'">Go back to Home</button>
+
+</body>
+
+</html>

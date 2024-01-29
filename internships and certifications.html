@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Internships and Certifications</title>
+    <style>
+        body {
+            font-family: 'Verdana', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            text-align: center;
+            margin: 2rem 0;
+            color: #333;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-around;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: #f5f5f5;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            width: calc(30% - 1rem);
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: black; /* Set title color to black */
+        }
+
+        .card-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .skills-list {
+            margin-top: 1rem;
+            list-style-type: none;
+            padding: 0;
+            color: #555;
+        }
+
+        .skills-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        .card-footer {
+            text-align: left; /* Align to the left */
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            color: #555;
+            font-weight: bold;
+            text-decoration: underline; /* Add underline */
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            overflow-y: auto;
+        }
+
+        .modal-content {
+            max-width: 80%;
+            max-height: 80%;
+            margin: auto;
+        }
+
+        .modal-img {
+            width: 100%;
+            max-height: 100%;
+            border-radius: 8px;
+        }
+
+        /* Go back button styles */
+        .go-back-button {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .go-back-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .go-back-button a:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>My Internships and Certifications</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="card" onclick="showModal('Acc certificate_page-0001.jpg')">
+            <div class="card-title">Developer Job Simulation - Accenture</div>
+            <div class="card-footer">Skills Acquired:</div>
+            <div class="skills-list">
+                <li>* Define technical requirements</li>
+                <li>* Design changes to an existing architecture</li>
+                <li>* Scale on-premise system infrastructure to the cloud</li>
+                <li>* Reading and understanding code</li>
+                <li>* Attention to detail</li>
+                <li>* Debugging algorithms</li>
+                <li>* Unit testing</li>
+                <li>* User Acceptance Testing - UAT</li>
+                <li>* Security maturity assessment</li>
+                <li>* IAM policies and permissions</li>
+                <li>* Securing the software development lifecycle (SDLC)</li>
+                <li>* Shaping the Problem</li>
+                <li>* Data and privacy</li>
+            </div>
+            <div class="card-image">
+                <img alt="Accenture Certification" src="Acc certificate_page-0001.jpg">
+            </div>
+        </div>
+
+        <!-- Salesforce Developer Virtual Internship -->
+        <div class="card" onclick="showModal('Salesforce certificate_page-0001.jpg')">
+            <div class="card-title">Salesforce Developer Virtual Internship - Salesforce</div>
+            <div class="card-footer">Skills Acquired:</div>
+            <div class="skills-list">
+                <li>* Salesforce Fundamentals</li>
+                <li>* Organizational Setup</li>
+                <li>* Relationship & Process Automation</li>
+                <li>* Types Of Flows & Security</li>
+                <li>* Apex, Testing & Debugging</li>
+                <li>* VS Code Setup & CLI Setup</li>
+                <li>* Lightning Web Components (LWC) & API</li>
+                <li>* Developer Super Set</li>
+            </div>
+            <div class="card-image">
+                <img alt="Salesforce Certification" src="Salesforce certificate_page-0001.jpg">
+            </div>
+        </div>
+
+        <div class="card" onclick="showModal('Teja Chamakuri  IGNITE Training Completion Certificate_page-0001 (1).jpg')">
+            <div class="card-title">LTI MINDTREE : Intern</div>
+            <div class="card-footer">Skills Acquired:</div>
+            <div class="skills-list">
+                <li>* Webservices</li>
+                <li>* Cloud Computing</li>
+                <li>* OS</li>
+                <li>* Shell Scripting</li>
+                <li>* DevOps</li>
+                <li>* Networking</li>
+            </div>
+            <div class="card-image">
+                <img alt="LTI MINDTREE Certification" src="Teja Chamakuri  IGNITE Training Completion Certificate_page-0001 (1).jpg">
+            </div>
+        </div>
+
+        <div class="card" onclick="showModal('IEEE Certificate_page-0001.jpg')">
+            <div class="card-title" style="color: black;">2nd International Symposium on Sustainable Energy and Technological Advancements (ISSETA 2023)</div>
+            <div class="card-image">
+                <img alt="IEEE Certification" src="IEEE Certificate_page-0001.jpg">
+            </div>
+        </div>
+
+        <div class="card" onclick="showModal('Ktps_page-0001.jpg')">
+            <div class="card-title">Overview of Thermal Power Plant (KTPS)</div>
+            <div class="card-footer">Skills Acquired:</div>
+            <div class="skills-list">
+                <li>* Overview of thermal power plant</li>
+            </div>
+            <div class="card-image">
+                <img alt="KTPS Certification" src="Ktps_page-0001.jpg">
+            </div>
+        </div>
+
+        <div class="card" onclick="showModal('COPES_certificate.jpg')">
+            <div class="card-title">Centre of Plant Engineering Services (COPES)</div>
+            <div class="card-footer">Skills Acquired:</div>
+            <div class="skills-list">
+                <li>* Transformers</li>
+                <li>* Induction Machines</li>
+                <li>* Substations</li>
+            </div>
+            <div class="card-image">
+                <img alt="COPES Certification" src="COPES.jpg">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="myModal" onclick="closeModal()">
+        <div class="modal-content">
+            <img class="modal-img" id="modalImage" alt="Full Certification Image">
+        </div>
+    </div>
+
+    <!-- Go back button -->
+    <div class="go-back-button">
+        <a href="index.html">Go Back to Home</a>
+    </div>
+
+    <script>
+        function showModal(imageSrc) {
+            document.getElementById('myModal').style.display = 'flex';
+            document.getElementById('modalImage').src = imageSrc;
+        }
+
+        function closeModal() {
+            document.getElementById('myModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

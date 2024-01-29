@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            padding: 2rem;
+            color: #333;
+            margin: 0;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #004080;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: center; /* Center the cards horizontally */
+        }
+
+        .card {
+            width: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            background: #fff;
+            margin: 1rem;
+            text-align: center;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            color: #000; /* Black title */
+            margin: 1rem;
+        }
+
+        .card-description {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+            margin: 1rem;
+        }
+
+        .card-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .go-back-button {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .go-back-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .go-back-button a:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>My Projects</h1>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <img class="card-image" src="vehicle.jpeg" alt="Vehicle Detection Image">
+            <div class="card-title">Vehicle Number Plate Detection</div>
+            <div class="card-description">
+                Designed and implemented a robust vehicle number plate detection system using a multi-stage approach, integrating computer vision techniques and image processing methodologies.
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-image" src="power.png" alt="Power Quality Improvement Image">
+            <div class="card-title">Power Quality Improvement</div>
+            <div class="card-description">
+                Led a power quality management project, focusing on harmonics reduction in electric power systems. Implemented a shunt hybrid power filter with advanced d-q and p-q control techniques, integrating an adaptive neuro-fuzzy inference system (ANFIS) for precise real power loss estimation. Successfully enhanced power quality by selectively eliminating harmonics, ensuring optimal performance of consumer equipment at the point of common coupling (PCC).
+            </div>
+        </div>
+
+        <div class="card">
+            <img class="card-image" src="sounds.jpeg" alt="Sound to Electric Energy Converter Image">
+            <div class="card-title">Sound To Electric Energy Converter</div>
+            <div class="card-description">
+                Designed an eco-friendly energy solution, repurposing wasted sound energy into usable power. Utilized piezoelectric microphones to capture air compressions, converting them into electric energy through a simple quadrupling circuit. This portable technology allows for immediate use or energy storage, presenting a sustainable approach to power generation.
+            </div>
+        </div>
+    </div>
+
+    <div class="go-back-button">
+        <a href="index.html">Go Back to Home</a>
+    </div>
+
+</body>
+
+</html>
