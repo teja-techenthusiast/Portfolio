@@ -31,7 +31,7 @@
             gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
-            justify-content: center; /* Center the cards horizontally */
+            justify-content: center;
         }
 
         .card {
@@ -50,16 +50,18 @@
         }
 
         .card-title {
-            font-size: 1.8rem;
-            color: #000; /* Black title */
+            font-size: 1.4rem;
+            color: #000;
             margin: 1rem;
+            font-weight: bold;
         }
 
         .card-description {
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.6;
             color: #555;
             margin: 1rem;
+            text-align: justify;
         }
 
         .card-image {
@@ -97,29 +99,91 @@
     </div>
 
     <div class="container">
+
+        <!-- Project 1 -->
         <div class="card">
-            <img class="card-image" src="assessts/vehicle.jpeg" alt="Vehicle Detection Image">
-            <div class="card-title">Vehicle Number Plate Detection</div>
+            <img class="card-image" src="assessts/arthea.png" alt="ARTHEA Project Image">
+            <div class="card-title">ARTHEA – AI-based LLD Generator</div>
             <div class="card-description">
-                Designed and implemented a robust vehicle number plate detection system using a multi-stage approach, integrating computer vision techniques and image processing methodologies.
+                <strong>Hitachi Vantara (Onsite)</strong><br>
+                <em>Jul 2025 – Present</em><br><br>
+                Built <strong>Arthea</strong>, an intelligent API system that auto-generates Low-Level Design (LLD)
+                documents from High-Level Design (HLD) inputs using Gemma-3 27B (instruction-tuned LLM). Integrated
+                <strong>FAISS, OpenCLIP embeddings, and RAG</strong> for contextual data retrieval. Designed multiple
+                LangChain-based chains (LDEV, Disk, Port) for structured document generation. Implemented using
+                <strong>Python, Django REST, and SQLite</strong>, reducing manual design effort and improving technical
+                clarity.
             </div>
         </div>
 
+        <!-- Project 2 -->
+        <div class="card">
+            <img class="card-image" src="assessts/servicenow.png" alt="ServiceNow Automation Project Image">
+            <div class="card-title">ServiceNow Automation & Reporting</div>
+            <div class="card-description">
+                Developed an automation solution using Python to extract and process ServiceNow ticket data for daily
+                operational reports. Integrated automated email notifications and dynamic Excel report generation,
+                reducing manual effort by over 70%. Implemented secure authentication and multi-level verification to
+                enhance process reliability.
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card">
+            <img class="card-image" src="assessts/bug_dashboard.png" alt="Bug Tracking Dashboard Image">
+            <div class="card-title">Bug Tracking Dashboard</div>
+            <div class="card-description">
+                Built a Django-based web application for managing and tracking bugs with analytics capabilities.
+                Implemented CRUD operations, CSV bulk upload, and chart-based data visualization using Matplotlib and
+                Plotly. Used <strong>Django</strong> for backend and <strong>HTML/CSS/JS</strong> for frontend with SQLite
+                database integration.
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="card">
+            <img class="card-image" src="assessts/automation_testing.png" alt="Automation Testing Project Image">
+            <div class="card-title">Automation Testing – Amazon Application</div>
+            <div class="card-description">
+                Automated test cases for Amazon’s web application using Katalon Studio. Integrated with Git and Jenkins
+                pipelines for continuous testing and reporting. Conducted cross-browser testing through Test Cloud to
+                ensure platform compatibility, resulting in faster validation and improved QA efficiency.
+            </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="card">
+            <img class="card-image" src="assessts/vehicle_env.jpeg" alt="Vehicle Detection Conditions Image">
+            <div class="card-title">Vehicle Number Plate Detection</div>
+            <div class="card-description">
+                Created a computer vision-based system for accurate vehicle number plate detection across varying
+                lighting and environmental conditions. Leveraged OpenCV and image preprocessing techniques to improve
+                detection accuracy.
+            </div>
+        </div>
+
+        <!-- Project 6 -->
         <div class="card">
             <img class="card-image" src="assessts/power.png" alt="Power Quality Improvement Image">
             <div class="card-title">Power Quality Improvement</div>
             <div class="card-description">
-                Led a power quality management project, focusing on harmonics reduction in electric power systems. Implemented a shunt hybrid power filter with advanced d-q and p-q control techniques, integrating an adaptive neuro-fuzzy inference system (ANFIS) for precise real power loss estimation. Successfully enhanced power quality by selectively eliminating harmonics, ensuring optimal performance of consumer equipment at the point of common coupling (PCC).
+                Designed a power management solution integrating a shunt hybrid power filter with adaptive neuro-fuzzy
+                inference (ANFIS) control for harmonic reduction and performance optimization at the point of common
+                coupling (PCC). Enhanced power quality and reduced total harmonic distortion in real-time simulations.
             </div>
         </div>
 
+        <!-- Project 7 -->
         <div class="card">
             <img class="card-image" src="assessts/sounds.jpeg" alt="Sound to Electric Energy Converter Image">
-            <div class="card-title">Sound To Electric Energy Converter</div>
+            <div class="card-title">Sound to Electric Energy Converter</div>
             <div class="card-description">
-                Designed an eco-friendly energy solution, repurposing wasted sound energy into usable power. Utilized piezoelectric microphones to capture air compressions, converting them into electric energy through a simple quadrupling circuit. This portable technology allows for immediate use or energy storage, presenting a sustainable approach to power generation.
+                Developed a sustainable energy model converting ambient sound vibrations into usable electrical energy
+                using piezoelectric microphones. Integrated a quadrupling circuit for efficient power conversion and
+                storage, providing an innovative green energy alternative.
             </div>
         </div>
+
     </div>
 
     <div class="go-back-button">

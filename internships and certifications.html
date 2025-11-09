@@ -2,301 +2,305 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Internships and Certifications</title>
-    <style>
-        body {
-            font-family: 'Verdana', sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internships & Certifications</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
 
-        .header {
-            text-align: center;
-            margin: 2rem 0;
-            color: #333;
-        }
+    .header {
+      text-align: center;
+      margin: 2rem 0;
+      color: #1e3c72;
+    }
 
-        .header h1 {
-            font-size: 3rem;
-            font-weight: bold;
-        }
+    .header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: space-around;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      padding: 0 1.5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        .card {
-            background: #f5f5f5;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            width: calc(30% - 1rem);
-            box-sizing: border-box;
-            cursor: pointer;
-        }
+    .card {
+      background: linear-gradient(145deg, #ffffff, #f1f3f6);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      width: 320px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
 
-        .card-title {
-            font-size: 1.5rem;
-            font-weight: bold;
-            font-style: italic;
-            margin-bottom: 1rem;
-            color: black; /* Set title color to black */
-        }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #1e3c72;
+      margin-bottom: 0.3rem;
+      text-align: center;
+    }
 
-        .card-image img {
-            width: 100%;
-            border-radius: 8px;
-            box-sizing: border-box;
-        }
+    .card-subtitle {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #444;
+      margin-bottom: 0.8rem;
+      text-align: center;
+    }
 
-        .skills-list {
-            margin-top: 1rem;
-            list-style-type: none;
-            padding: 0;
-            color: #555;
-        }
+    .skills-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0.5rem 0;
+      font-size: 0.95rem;
+      color: #444;
+      text-align: left;
+    }
 
-        .skills-list li {
-            margin-bottom: 0.5rem;
-        }
+    .skills-list li::before {
+      content: "• ";
+      color: #1e3c72;
+    }
 
-        .card-footer {
-            text-align: left; /* Align to the left */
-            margin-top: 1rem;
-            font-size: 1.2rem;
-            color: #555;
-            font-weight: bold;
-            text-decoration: underline; /* Add underline */
-        }
+    .card-image img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 0.8rem;
+    }
 
-        /* Modal styles */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            overflow-y: auto;
-        }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
 
-        .modal-content {
-            max-width: 80%;
-            max-height: 80%;
-            margin: auto;
-        }
+    .modal-content {
+      max-width: 85%;
+      max-height: 85%;
+      margin: auto;
+    }
 
-        .modal-img {
-            width: 100%;
-            max-height: 100%;
-            border-radius: 8px;
-        }
+    .modal-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
 
-        /* Go back button styles */
-        .go-back-button {
-            text-align: center;
-            margin-top: 2rem;
-        }
+    .go-back-button {
+      text-align: center;
+      margin: 2rem 0;
+    }
 
-        .go-back-button a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #000;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
+    .go-back-button a {
+      background-color: #1e3c72;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s;
+    }
 
-        .go-back-button a:hover {
-            background-color: #333;
-        }
-    </style>
+    .go-back-button a:hover {
+      background-color: #2a5298;
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="header">
-        <h1>My Internships and Certifications</h1>
+  <div class="header">
+    <h1>Internships & Certifications</h1>
+  </div>
+
+  <div class="container">
+
+    <!-- Latest First -->
+
+    <!-- Generative AI -->
+    <div class="card" onclick="showModal('assessts/genai.jpg')">
+      <div class="card-title">Generative AI for Beginners</div>
+      <div class="card-subtitle">Issued Sep 2025</div>
+      <ul class="skills-list">
+        <li>Explored fundamentals of GenAI & LLMs</li>
+        <li>Learned prompt design & AI-driven applications</li>
+      </ul>
+      <div class="card-image">
+        <img src="assessts/genai.jpg" alt="Generative AI Certification">
+      </div>
     </div>
 
-    <div class="container">
-
-        <div class="card" onclick="showModal('assessts/Acc certificate_page-0001.jpg')">
-            <div class="card-title">Developer Job Simulation - Accenture</div>
-            <div class="card-footer">Skills Acquired:</div>
-            <div class="skills-list">
-                <li>* Define technical requirements</li>
-                <li>* Design changes to an existing architecture</li>
-                <li>* Scale on-premise system infrastructure to the cloud</li>
-                <li>* Reading and understanding code</li>
-                <li>* Attention to detail</li>
-                <li>* Debugging algorithms</li>
-                <li>* Unit testing</li>
-                <li>* User Acceptance Testing - UAT</li>
-                <li>* Security maturity assessment</li>
-                <li>* IAM policies and permissions</li>
-                <li>* Securing the software development lifecycle (SDLC)</li>
-                <li>* Shaping the Problem</li>
-                <li>* Data and privacy</li>
-            </div>
-            <div class="card-image">
-                <img alt="Accenture Certification" src="assessts/Acc certificate_page-0001.jpg">
-            </div>
-        </div>
-
-        <!-- Salesforce Developer Virtual Internship -->
-        <div class="card" onclick="showModal('assessts/salesforce c.jpg')">
-            <div class="card-title">Salesforce Developer Virtual Internship - Salesforce</div>
-            <div class="card-footer">Skills Acquired:</div>
-            <div class="skills-list">
-                <li>* Salesforce Fundamentals</li>
-                <li>* Organizational Setup</li>
-                <li>* Relationship & Process Automation</li>
-                <li>* Types Of Flows & Security</li>
-                <li>* Apex, Testing & Debugging</li>
-                <li>* VS Code Setup & CLI Setup</li>
-                <li>* Lightning Web Components (LWC) & API</li>
-                <li>* Developer Super Set</li>
-            </div>
-            <div class="card-image">
-                <img alt="Salesforce Certification" src="assessts/salesforce c.jpg">
-            </div>
-        </div>
-
-        <div class="card" onclick="showModal('assessts/Teja Chamakuri  IGNITE Training Completion Certificate_page-0001 (1).jpg')">
-            <div class="card-title">LTI MINDTREE : Intern</div>
-            <div class="card-footer">Skills Acquired:</div>
-            <div class="skills-list">
-                <li>* Webservices</li>
-                <li>* Cloud Computing</li>
-                <li>* OS</li>
-                <li>* Shell Scripting</li>
-                <li>* DevOps</li>
-                <li>* Networking</li>
-            </div>
-            <div class="card-image">
-                <img alt="LTI MINDTREE Certification" src="assessts/Teja Chamakuri  IGNITE Training Completion Certificate_page-0001 (1).jpg">
-            </div>
-        </div>
-
-        <div class="card" onclick="showModal('assessts/IEEE Certificate_page-0001.jpg')">
-            <div class="card-title" style="color: black;">2nd International Symposium on Sustainable Energy and Technological Advancements (ISSETA 2023)</div>
-            <div class="card-image">
-                <img alt="IEEE Certification" src="assessts/IEEE Certificate_page-0001.jpg">
-            </div>
-        </div>
-
-        <div class="card" onclick="showModal('assessts/Ktps_page-0001.jpg')">
-            <div class="card-title">Overview of Thermal Power Plant (KTPS)</div>
-            <div class="card-footer">Skills Acquired:</div>
-            <div class="skills-list">
-                <li>* Overview of thermal power plant</li>
-            </div>
-            <div class="card-image">
-                <img alt="KTPS Certification" src="assessts/Ktps_page-0001.jpg">
-            </div>
-        </div>
-
-        <div class="card" onclick="showModal('assessts/COPES.jpg')">
-            <div class="card-title">Centre of Plant Engineering Services (COPES)</div>
-            <div class="card-footer">Skills Acquired:</div>
-            <div class="skills-list">
-                <li>* Transformers</li>
-                <li>* Induction Machines</li>
-                <li>* Substations</li>
-            </div>
-            <div class="card-image">
-                <img alt="COPES Certification" src="assessts/COPES.jpg">
-            </div>
-        </div>
-
-        <!-- SQL and Relational Databases 101 -->
-        <div class="card" onclick="showModal('assessts/IBM DB0101EN Certificate _ Cognitive Class_page-0001.jpg')">
-            <div class="card-title">SQL and Relational Databases 101</div>
-            <div class="card-image">
-                <img alt="SQL Certification" src="assessts/IBM DB0101EN Certificate _ Cognitive Class_page-0001.jpg">
-            </div>
-        </div>
-
-        <!-- Machine Learning with Python -->
-        <div class="card" onclick="showModal('assessts/IBM ML0101EN Certificate _ Cognitive Class_page-0001.jpg')">
-            <div class="card-title">Machine Learning with Python</div>
-            <div class="card-image">
-                <img alt="Machine Learning Certification" src="assessts/IBM ML0101EN Certificate _ Cognitive Class_page-0001.jpg">
-            </div>
-        </div>
-
-        <!-- Python 101 for Data Science -->
-        <div class="card" onclick="showModal('assessts/IBM PY0101EN Certificate _ Cognitive Class_page-0001.jpg')">
-            <div class="card-title">Python 101 for Data Science</div>
-            <div class="card-image">
-                <img alt="Python Data Science Certification" src="assessts/IBM PY0101EN Certificate _ Cognitive Class_page-0001.jpg">
-            </div>
-        </div>
-
-        <!-- Software Automation Testing Certification -->
-        <div class="card" onclick="showModal('assessts/Testing.png')">
-            <div class="card-title">Software Automation Testing</div>
-            <div class="card-footer">Skills Acquired:</div>
-            <div class="skills-list">
-                <li>* Test automation frameworks</li>
-                <li>* Selenium WebDriver</li>
-                <li>* TestNG or JUnit</li>
-                <li>* Continuous Integration/Continuous Deployment (CI/CD)</li>
-                <li>* Scripting languages like Python or Java for automation</li>
-                <li>* API testing</li>
-                <li>* Behavior-driven development (BDD) with tools like Cucumber</li>
-                <li>* Load and performance testing</li>
-            </div>
-            <div class="card-image">
-                <img alt="Software Automation Testing Certification" src="assessts/Testing.png">
-            </div>
-        </div>
-
+    <!-- ITIL -->
+    <div class="card" onclick="showModal('assessts/itil.jpg')">
+      <div class="card-title">ITIL Foundation Certification</div>
+      <div class="card-subtitle">Issued Mar 2025</div>
+      <ul class="skills-list">
+        <li>Understanding of IT service management principles</li>
+        <li>Knowledge of ITIL framework & lifecycle processes</li>
+      </ul>
+      <div class="card-image">
+        <img src="assessts/itil.jpg" alt="ITIL Certification">
+      </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal" id="myModal" onclick="closeModal()">
-        <div class="modal-content">
-            <img class="modal-img" id="modalImage" alt="Full Certification Image">
-        </div>
+    <!-- Accenture -->
+    <div class="card" onclick="showModal('assessts/Acc certificate_page-0001.jpg')">
+      <div class="card-title">Accenture Developer Job Simulation</div>
+      <div class="card-subtitle">Issued Feb 2024</div>
+      <ul class="skills-list">
+        <li>Understanding of SDLC & cloud infrastructure design</li>
+        <li>Hands-on IAM, UAT, debugging, and security maturity assessment</li>
+      </ul>
+      <div class="card-image">
+        <img src="assessts/Acc certificate_page-0001.jpg" alt="Accenture Certificate">
+      </div>
     </div>
 
-    <!-- Go back button -->
-    <div class="go-back-button">
-        <a href="index.html">Go Back to Home</a>
+
+
+    <!-- Software Test Automation Internship -->
+    <div class="card" onclick="showModal('assessts/Testing.png')">
+      <div class="card-title">Software Test Automation Virtual Internship</div>
+      <div class="card-subtitle">Dec 2023 – Feb 2024</div>
+      <ul class="skills-list">
+        <li>Hands-on experience in test automation frameworks</li>
+        <li>Regression, load, and performance testing</li>
+        <li>Exposure to CI/CD integration using Jenkins</li>
+      </ul>
+      <div class="card-image">
+        <img src="assessts/Testing.png" alt="Software Test Automation Internship Certificate">
+      </div>
     </div>
 
-    <script>
-        function showModal(imageSrc) {
-            document.getElementById('myModal').style.display = 'flex';
-            document.getElementById('modalImage').src = imageSrc;
-        }
+    <!-- IBM Certifications -->
+    <div class="card" onclick="showModal('assessts/IBM ML0101EN Certificate _ Cognitive Class_page-0001.jpg')">
+      <div class="card-title">Machine Learning with Python – IBM</div>
+      <div class="card-subtitle">Issued Feb 2024</div>
+      <div class="card-image">
+        <img src="assessts/IBM ML0101EN Certificate _ Cognitive Class_page-0001.jpg" alt="ML Certification">
+      </div>
+    </div>
 
-        function closeModal() {
-            document.getElementById('myModal').style.display = 'none';
-        }
-    </script>
+    <div class="card" onclick="showModal('assessts/IBM PY0101EN Certificate _ Cognitive Class_page-0001.jpg')">
+      <div class="card-title">Python 101 for Data Science – IBM</div>
+      <div class="card-subtitle">Issued Feb 2024</div>
+      <div class="card-image">
+        <img src="assessts/IBM PY0101EN Certificate _ Cognitive Class_page-0001.jpg" alt="Python Certification">
+      </div>
+    </div>
+
+    <div class="card" onclick="showModal('assessts/IBM DB0101EN Certificate _ Cognitive Class_page-0001.jpg')">
+      <div class="card-title">SQL and Relational Databases – IBM</div>
+      <div class="card-subtitle">Issued Feb 2024</div>
+      <div class="card-image">
+        <img src="assessts/IBM DB0101EN Certificate _ Cognitive Class_page-0001.jpg" alt="SQL Certification">
+      </div>
+    </div>
+
+    <!-- Salesforce -->
+    <div class="card" onclick="showModal('assessts/salesforce c.jpg')">
+      <div class="card-title">Salesforce Developer Virtual Internship</div>
+      <div class="card-subtitle">Oct 2023 – Nov 2023</div>
+      <ul class="skills-list">
+        <li>Developed workflows, triggers, and Lightning components</li>
+        <li>Explored Salesforce automation and Apex development</li>
+        <li>Hands-on practice with process builders and testing</li>
+      </ul>
+      <div class="card-image">
+        <img src="assessts/salesforce c.jpg" alt="Salesforce Internship Certificate">
+      </div>
+    </div>
+
+    <!-- LTIMindtree -->
+    <div class="card" onclick="showModal('assessts/Teja Chamakuri  IGNITE Training Completion Certificate_page-0001 (1).jpg')">
+      <div class="card-title">LTIMindtree Virtual Internship</div>
+      <div class="card-subtitle">Aug 2023 – Oct 2023</div>
+      <ul class="skills-list">
+        <li>Introduced to web services, DevOps, and cloud computing</li>
+        <li>Gained practical knowledge in OS, shell scripting & networking</li>
+      </ul>
+      <div class="card-image">
+        <img src="assessts/Teja Chamakuri  IGNITE Training Completion Certificate_page-0001 (1).jpg" alt="LTIMindtree Internship Certificate">
+      </div>
+    </div>
+
+    <!-- IEEE -->
+    <div class="card" onclick="showModal('assessts/IEEE Certificate_page-0001.jpg')">
+      <div class="card-title">IEEE ISSETA 2023 Conference Participation</div>
+      <div class="card-subtitle">Issued Nov 2023</div>
+      <div class="card-image">
+        <img src="assessts/IEEE Certificate_page-0001.jpg" alt="IEEE Certificate">
+      </div>
+    </div>
+
+    <!-- KTPS -->
+    <div class="card" onclick="showModal('assessts/Ktps_page-0001.jpg')">
+      <div class="card-title">KTPS Thermal Power Plant Training</div>
+      <div class="card-subtitle">Issued Aug 2022</div>
+      <div class="card-image">
+        <img src="assessts/Ktps_page-0001.jpg" alt="KTPS Certificate">
+      </div>
+    </div>
+
+    <!-- COPES -->
+    <div class="card" onclick="showModal('assessts/COPES.jpg')">
+      <div class="card-title">Centre of Plant Engineering Services (COPES)</div>
+      <div class="card-subtitle">Issued Jul 2022</div>
+      <ul class="skills-list">
+        <li>Exposure to transformers, induction machines & substations</li>
+      </ul>
+      <div class="card-image">
+        <img src="assessts/COPES.jpg" alt="COPES Certificate">
+      </div>
+    </div>
+
+  </div>
+
+  <div class="modal" id="myModal" onclick="closeModal()">
+    <div class="modal-content">
+      <img class="modal-img" id="modalImage" alt="Certificate Full View">
+    </div>
+  </div>
+
+  <div class="go-back-button">
+    <a href="index.html">Go Back to Home</a>
+  </div>
+
+  <script>
+    function showModal(imageSrc) {
+      document.getElementById('myModal').style.display = 'flex';
+      document.getElementById('modalImage').src = imageSrc;
+    }
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+    }
+  </script>
 
 </body>
 
